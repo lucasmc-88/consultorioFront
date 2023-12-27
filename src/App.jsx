@@ -7,11 +7,13 @@ import LoginUsers from './users/loginUsers';
 import { AuthProvider, useAuth } from './authContext/authContext';
 import DoctorList from './doctor/components/DoctorList';
 import DoctorDropdown from './doctor/components/DoctorDropDown';
+import CreateDoctor from './doctor/components/CreateDoctor';
+import UpdateDoctor from './doctor/components/UpdateDoctor';
 
 
 const App = () => {
   return (
-    <AuthProvider>
+    
       <BrowserRouter>
     <NavBarGeneral/>
     <Routes>
@@ -20,9 +22,11 @@ const App = () => {
         <Route path="/specialtyTable" element={<SpecialtyTable />} />
         <Route path="/doctorList" element={<DoctorList />} />
         <Route path="/DoctorDropdown" element={<DoctorDropdown />} />
+        <Route path="/CreateDoctor" element={<CreateDoctor />} />
+        <Route path="/UpdateDoctor/:doctorId" element={<UpdateDoctor />} />
         </Routes>
     </BrowserRouter>
-    </AuthProvider>
+
   );
 };
 

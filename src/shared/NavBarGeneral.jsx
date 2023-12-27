@@ -5,15 +5,13 @@ function NavBarGeneral() {
         <>
             <Navbar bg="dark" data-bs-theme="dark">
                 <Container>
-                    <Navbar.Brand href="#home">Emprender Mujer</Navbar.Brand>
+                    <Navbar.Brand href="#home">Consultorio</Navbar.Brand>
                     <Nav className="me-auto">
                         <Nav.Link href="/doctorList">Doctores</Nav.Link>
                         <Nav.Link href="/DoctorDropdown">Detalles de doctores</Nav.Link>
                         <Nav.Link href="/specialtyTable">Especialidades</Nav.Link>
-                        <Nav.Link href="/videos">Videos</Nav.Link>
-                        <Nav.Link href="/courses">Cursos</Nav.Link>
-                        <Nav.Link href="/questions">Preguntas</Nav.Link>
-                        <Nav.Link href="/users">Usuarios</Nav.Link>
+                        <Nav.Link href="/CreateDoctor">Crear Doctor</Nav.Link>
+                        {/* <Nav.Link href="/UpdateDoctor">Actualizar Doctor</Nav.Link> */}
                     </Nav>
                 </Container>
             </Navbar>

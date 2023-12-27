@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Table from 'react-bootstrap/Table';
+import { Link } from 'react-router-dom';
 
 const DoctorList = () => {
     const [doctors, setDoctors] = useState([]);
@@ -35,6 +36,7 @@ const DoctorList = () => {
                         <th>Nombre</th>
                         <th>Especialidad</th>
                         <th>Género</th>
+                        <th>Acciones</th> {/* Agrega una columna para acciones */}
                     </tr>
                 </thead>
                 <tbody>
@@ -43,7 +45,17 @@ const DoctorList = () => {
                             <td>{index + 1}</td>
                             <td>{doctor.name}</td>
                             <td>{doctor.specialtyId.name}</td>
-                            <td>{doctor.gender}</td>
+                            <td>{doctor.gender === 'f' ? 'Femenino' : 'Masculino'}</td>
+                            <td>
+                                <Link
+                                    to={{
+                                        pathname: `/UpdateDoctor/${doctor._id}`,
+                                        state: { doctorData: doctor },
+                                    }}
+                                >
+                                    <button>Actualizar</button>
+                                </Link>
+                            </td>
                         </tr>
                     ))}
                 </tbody>
