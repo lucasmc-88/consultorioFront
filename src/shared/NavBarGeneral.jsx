@@ -11,6 +11,7 @@ function NavBarGeneral() {
                         <Nav.Link href="/DoctorDropdown">Detalles de doctores</Nav.Link>
                         <Nav.Link href="/specialtyTable">Especialidades</Nav.Link>
                         <Nav.Link href="/CreateDoctor">Crear Doctor</Nav.Link>
+                        <Nav.Link href="/AppointmentsByDoctor">Busqueda citas</Nav.Link>
                         {/* <Nav.Link href="/UpdateDoctor">Actualizar Doctor</Nav.Link> */}
                     </Nav>
                 </Container>
